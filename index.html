@@ -7,7 +7,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: transparent;
+      background-color: transparent; /* Fondo transparente */
       color: white;
       font-family: Arial, sans-serif;
       display: flex;
@@ -31,7 +31,7 @@
       width: 250px;
       height: 250px;
       border-radius: 12px;
-      background: #fff;
+      background: #fff; 
       display: flex;
       align-items: center;
       justify-content: center;
@@ -47,7 +47,6 @@
       object-fit: contain;
     }
 
-    /* Animación: entra grande, se achica al salir */
     @keyframes slideAndScale {
       0% {
         transform: translateX(-100%) scale(0.7);
@@ -65,7 +64,6 @@
       }
     }
 
-    /* Aplicar animación a cada tarjeta con delay */
     .card:nth-child(1) { animation: slideAndScale 8s ease-in-out infinite; }
     .card:nth-child(2) { animation: slideAndScale 8s ease-in-out infinite 2s; }
     .card:nth-child(3) { animation: slideAndScale 8s ease-in-out infinite 4s; }
@@ -75,24 +73,19 @@
 <body>
 
   <div class="carousel">
-    <!-- Logo 1 -->
     <div class="card">
       <img src="https://i.imgur.com/GUbmpgD.png" alt="Secure Ordering" class="logo">
     </div>
-    <!-- Logo 2 -->
     <div class="card">
       <img src="https://i.imgur.com/1Qb4d4q.png" alt="Satisfaction Guaranteed" class="logo">
     </div>
-    <!-- Logo 3 -->
     <div class="card">
       <img src="https://i.imgur.com/lSFofbO.png" alt="Premium Quality" class="logo">
     </div>
-    <!-- Logo 4 -->
     <div class="card">
       <img src="https://i.imgur.com/YmDnl46.png" alt="Great Customer Service" class="logo">
     </div>
   </div>
 
 </body>
-
 </html>
