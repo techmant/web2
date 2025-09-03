@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Baraja de Logos - Movimiento Horizontal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFFF;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .carousel {
+      position: relative;
+      width: 500px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 12px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateX(-100%) scale(0.7);
+      z-index: 1;
+    }
+
+    .logo {
+      max-width: 200px;
+      max-height: 120px;
+      object-fit: contain;
+    }
+
+    /* Animación: entra grande, se achica al salir */
+    @keyframes slideAndScale {
+      0% {
+        transform: translateX(-100%) scale(0.7);
+        opacity: 0;
+      }
+      50% {
+        transform: translateX(0) scale(1.1);
+        opacity: 1;
+        z-index: 10;
+      }
+      100% {
+        transform: translateX(100%) scale(0.7);
+        opacity: 0;
+        z-index: 1;
+      }
+    }
+
+    /* Aplicar animación a cada tarjeta con delay */
+    .card:nth-child(1) { animation: slideAndScale 8s ease-in-out infinite; }
+    .card:nth-child(2) { animation: slideAndScale 8s ease-in-out infinite 2s; }
+    .card:nth-child(3) { animation: slideAndScale 8s ease-in-out infinite 4s; }
+    .card:nth-child(4) { animation: slideAndScale 8s ease-in-out infinite 6s; }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <!-- Logo 1 -->
+    <div class="card">
+      <img src="https://i.imgur.com/GUbmpgD.png" alt="Secure Ordering" class="logo">
+    </div>
+    <!-- Logo 2 -->
+    <div class="card">
+      <img src="https://i.imgur.com/1Qb4d4q.png" alt="Satisfaction Guaranteed" class="logo">
+    </div>
+    <!-- Logo 3 -->
+    <div class="card">
+      <img src="https://i.imgur.com/lSFofbO.png" alt="Premium Quality" class="logo">
+    </div>
+    <!-- Logo 4 -->
+    <div class="card">
+      <img src="https://i.imgur.com/YmDnl46.png" alt="Great Customer Service" class="logo">
+    </div>
+  </div>
+
+</body>
+</html>
